@@ -17,9 +17,9 @@ Public Class PersonasCollection
     End Property
 
     Protected Overrides Function FindCore(ByVal prop As PropertyDescriptor, ByVal key As Object) As Integer
-        For Each PersonasClass In Me
-            If prop.GetValue(PersonasClass).Equals(key) Then
-                Return Me.IndexOf(PersonasClass)
+        For Each carrera In Me
+            If prop.GetValue(carrera).Equals(key) Then
+                Return Me.IndexOf(carrera)
             End If
         Next
     End Function

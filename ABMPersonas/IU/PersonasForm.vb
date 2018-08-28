@@ -36,7 +36,7 @@
     End Sub
 
     Private Sub aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles aceptar.Click
-        'MiPersona.id = CInt(TextBox1.Text)
+        MiPersona.id = CInt(TextBox1.Text)
         MiPersona.nombre = TextBox2.Text
         MiPersona.direccion = TextBox3.Text
         MiPersona.codPostal = CInt(TextBox4.Text)
