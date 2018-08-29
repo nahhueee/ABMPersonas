@@ -44,7 +44,7 @@ Public Class PersonasCollection
             MiPersona.nombre = dr("nombre")
             MiPersona.direccion = dr("direccion")
             MiPersona.codPostal = CInt(dr("codPostal"))
-            MiPersona.idProvincia = CInt(dr("idProvincia"))
+            MiPersona.idProvincia = CInt(dr("IdProvincia"))
             MiPersona.tipoDocumento = dr("tipoDocumento")
             MiPersona.nroDocumento = CDec(dr("nroDocumento"))
             Me.Add(MiPersona)

@@ -25,10 +25,12 @@
     Private Sub PersonasForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ComboBox1.DataSource = MiPersona.provincias
         ComboBox2.DataSource = MiPersona.documentos
+
         TextBox1.Enabled = False
         TextBox1.ReadOnly = True
-        'ComboBox1.SelectedIndex = 0
-        'ComboBox2.SelectedIndex = 0
+
+        ComboBox1.SelectedIndex = 0
+        ComboBox2.SelectedIndex = 0
     End Sub
 
     Private Sub cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelar.Click
@@ -36,7 +38,9 @@
     End Sub
 
     Private Sub aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles aceptar.Click
-        MiPersona.id = CInt(TextBox1.Text)
+        If operacion_ <> "nuevo" Then
+            MiPersona.id = CInt(TextBox1.Text)
+        End If
         MiPersona.nombre = TextBox2.Text
         MiPersona.direccion = TextBox3.Text
         MiPersona.codPostal = CInt(TextBox4.Text)
